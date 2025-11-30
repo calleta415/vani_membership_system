@@ -22,6 +22,8 @@ import { ProfileDropdown } from "./ProfileDropdown";
 import { EditProfileModal } from "./EditProfileModal";
 import { ViewReceiptModal } from "./ViewReceiptModal";
 import { ChangePasswordModal } from "./ChangePasswordModal";
+import { SlideCarousel } from "./SlideCarousel";
+import logo from "../assets/logo.png";
 
 // Mock user data
 const mockUserData = {
@@ -87,8 +89,8 @@ export function UserDashboard({ onLogout }: { onLogout: () => void }) {
         {/* Logo */}
         <div className="p-6 border-b border-white/20">
           <div className="flex items-center space-x-3">
-            <div className="bg-white/20 p-2 rounded-xl">
-              <Waves className="w-8 h-8 text-white" />
+            <div className="p-2 rounded-xl">
+              <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
             </div>
             <div>
               <h2 className="text-white">Member Portal</h2>
@@ -168,6 +170,9 @@ export function UserDashboard({ onLogout }: { onLogout: () => void }) {
         <main className="flex-1 p-6 overflow-auto">
           {activeTab === "dashboard" && (
             <div className="space-y-6">
+              {/* Slide Carousel */}
+              <SlideCarousel />
+
               {/* Quick Stats Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Membership Status */}

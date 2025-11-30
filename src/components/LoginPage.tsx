@@ -5,6 +5,7 @@ import { Label } from "./ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { Lock, Mail, Waves } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import logo from "../assets/logo.png";
 
 interface LoginPageProps {
   onNavigateToRegister: () => void;
@@ -41,8 +42,8 @@ export function LoginPage({ onNavigateToRegister, onNavigateToForgotPassword, on
       <div className="w-full max-w-md relative z-10">
         {/* Logo/Header Section */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-teal-500 rounded-3xl mb-4 shadow-2xl border-4 border-white/20">
-            <Waves className="w-10 h-10 text-white" />
+          <div className="inline-flex items-center justify-center w-40 h-40 mb-4">
+            <img src={logo} alt="Logo" className="w-40 h-40 object-contain drop-shadow-2xl" />
           </div>
           <h1 className="text-white mb-2 drop-shadow-lg">Membership Management System</h1>
           <p className="text-cyan-100 drop-shadow-md">Sign in to access your account</p>

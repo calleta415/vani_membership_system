@@ -26,6 +26,8 @@ import { ChangeRoleModal } from "./ChangeRoleModal";
 import { DeleteMemberModal } from "./DeleteMemberModal";
 import { FeeManagement } from "./FeeManagement";
 import { AdminSettings } from "./AdminSettings";
+import { SlideCarousel } from "./SlideCarousel";
+import logo from "../assets/logo.png";
 
 // Mock admin data
 const mockAdminData = {
@@ -113,8 +115,8 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
         {/* Logo */}
         <div className="p-6 border-b border-white/20">
           <div className="flex items-center space-x-3">
-            <div className="bg-white/20 p-2 rounded-xl">
-              <Waves className="w-8 h-8 text-white" />
+            <div className="p-2 rounded-xl">
+              <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
             </div>
             <div>
               <h2 className="text-white">Admin Panel</h2>
@@ -226,6 +228,9 @@ export function AdminDashboard({ onLogout }: { onLogout: () => void }) {
         <main className="flex-1 p-6 overflow-auto">
           {activeTab === "overview" && (
             <div className="space-y-6">
+              {/* Slide Carousel */}
+              <SlideCarousel />
+
               {/* Stats Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Total Members */}
